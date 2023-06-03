@@ -57,7 +57,7 @@ if (!(Test-Path -Path $path)) {
 Set-Location -Path $path
 
 # Now contains the certificate
-[string]$PwdStr = "CERT PASSWORD"
+[string]$PwdStr = "CERT PASSWORD"  ### -- Update
 $cert | Export-PfxCertificate -FilePath "c:\exports\export.pfx" -Password (ConvertTo-SecureString -String $PwdStr -Force -AsPlainText)
 
 [string]$pfxPath = "c:\exports\export.pfx"
